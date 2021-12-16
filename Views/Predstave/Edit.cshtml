@@ -1,0 +1,41 @@
+@model web.Models.Predstava
+
+@{
+    ViewData["Title"] = "Uredi";
+}
+<span style="color:white;">
+<h1>Uredi</h1>
+
+<h4>Predstava</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="PredstavaID" />
+            <div class="form-group">
+                <label asp-for="FilmID" class="control-label"></label>
+                <input asp-for="FilmID" class="form-control" />
+                <span asp-validation-for="FilmID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DvoranaID" class="control-label"></label>
+                <input asp-for="DvoranaID" class="form-control" />
+                <span asp-validation-for="DvoranaID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Predstava_cas" class="control-label"></label>
+                <input asp-for="Predstava_cas" class="form-control" />
+                <span asp-validation-for="Predstava_cas" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Shrani" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Nazaj</a>
+</div>
+</span>

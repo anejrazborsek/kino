@@ -1,0 +1,43 @@
+@model IEnumerable<web.Models.Predstava>
+
+
+@{
+    ViewData["Title"] = "Predstave";
+}
+<span style="color:white;">
+<h1>Predstave</h1>
+
+<p>
+    <a asp-action="Create">Dodaj novo predstavo</a> <!-- navadni uporabnik nima dostopa tu -->
+</p>
+<table class="table">
+    
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+               
+               <img src="@Url.Content(@item.Film.Film_img)" width="200" height="300"> 
+            
+            </td>
+            <td>
+
+               <span style="color:white; font-weight:bold; font-size:200%;">@Html.DisplayFor(modelItem => item.Film.Film_ime)</span><br>
+            
+               <span style="color:white; font-size:180%;">V dvorani: @Html.DisplayFor(modelItem => item.DvoranaID) - @Html.DisplayFor(modelItem => item.Dvorana.Dvorana_tip)</span><br>
+               
+               <span style="color:white; font-size:150%;">Naslednje predvajanje: @Html.DisplayFor(modelItem => item.Predstava_cas)</span><br>
+
+
+            </td>
+            <td>
+                
+                <a asp-action="Edit" asp-route-id="@item.PredstavaID">Uredi</a><br> <!-- navadni uporabnik nima dostopa tu -->
+                <a asp-action="Details" asp-route-id="@item.PredstavaID">Podrobnosti</a> <br>
+                <a asp-action="Delete" asp-route-id="@item.PredstavaID">Zbriši</a> <br><!-- navadni uporabnik nima dostopa tu -->
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+</span>

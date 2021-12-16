@@ -1,0 +1,46 @@
+@model web.Models.Predstava
+
+@{
+    ViewData["Title"] = "Zbriši";
+}
+<span style="color:white;">
+<h1>Zbriši</h1>
+
+<h3>Ali res želite zbrisati to predstavo?</h3>
+<div>
+    <h4>Predstava</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Film.FilmID)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Film.FilmID)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Dvorana.DvoranaID)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Dvorana.DvoranaID)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Predstava_cas)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Predstava_cas)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PredstavaID)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PredstavaID)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="PredstavaID" />
+        <input type="submit" value="Zbriši" class="btn btn-danger" /> |
+        <a asp-action="Index">Nazaj</a>
+    </form>
+</div>
+</span>

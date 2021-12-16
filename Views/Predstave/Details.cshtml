@@ -1,0 +1,47 @@
+@model web.Models.Predstava
+
+
+@{
+    ViewData["Title"] = "Podrobnosti";
+}
+<span style="color:white;">
+<h1>Podrobnosti</h1>
+
+<div>
+    <h4>Predstava</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PredstavaID)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PredstavaID)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FilmID)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FilmID)
+        </dd>
+
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DvoranaID)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DvoranaID)
+        </dd>
+         
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Predstava_cas)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Predstava_cas)
+        </dd>
+        
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.PredstavaID">Uredi</a> |
+    <a asp-action="Index">Nazaj</a>
+</div>
+</span>

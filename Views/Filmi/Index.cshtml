@@ -1,0 +1,42 @@
+@model IEnumerable<web.Models.Film>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<span style="color:white;"><h1>Filmi</h1>
+
+<p>
+    <a asp-action="Create">Dodaj nov film</a> <!-- navadni uporabnik nima dostopa tu -->
+</p>
+<table class="table">
+   
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                <img src="@Url.Content(@item.Film_img)" width="200" height="300"> 
+            </td>
+            <td>
+               
+               <span style="color:white; font-weight:bold; font-size:300%;">@Html.DisplayFor(modelItem => item.Film_ime)</span><br>
+        
+               <span style="color:white; font-size:150%">Trajanje: @Html.DisplayFor(modelItem => item.Film_trajanje) min</span><br>
+               
+               <span style="color:white; font-size:150%">@Html.DisplayFor(modelItem => item.Film_reziser)</span><br>
+            
+               <span style="color:white; font-size:130%">@Html.DisplayFor(modelItem => item.Film_opis)</span><br>
+
+            </td>
+        
+            <!-- navadni uporabnik nima dostopa tu -->
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.FilmID">Uredi</a><br> 
+                <a asp-action="Details" asp-route-id="@item.FilmID">Podrobnosti</a><br>
+                <a asp-action="Delete" asp-route-id="@item.FilmID">Zbriši</a><br> 
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+</span>
