@@ -53,5 +53,5 @@ jobs:
         with:
           app-name: 'kino-anej'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_26F35506E019487DA2962CC17DDD881D }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_44537B8D1D2F4D8C9D9E922CD30A3307 }}
           package: .
