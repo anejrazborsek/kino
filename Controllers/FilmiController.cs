@@ -45,7 +45,7 @@ namespace web.Controllers
         }
 
         // GET: Create
-        //[Authorize]
+        [Authorize]
         public IActionResult Create()
         {
             return View();
@@ -68,7 +68,7 @@ namespace web.Controllers
         }
 
         // GET: 
-        //[Authorize]
+        [Authorize]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -120,7 +120,7 @@ namespace web.Controllers
         }
 
         // GET: 
-        //[Authorize]
+        [Authorize]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
