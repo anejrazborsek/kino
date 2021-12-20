@@ -1807,4 +1807,3 @@ D:\FRI\IS\repository\bin\Debug\net6.0\Microsoft.OpenApi.dll
 D:\FRI\IS\repository\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
 D:\FRI\IS\repository\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 D:\FRI\IS\repository\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
-D:\FRI\IS\repository\obj\Debug\net6.0\web.csproj.CopyComplete

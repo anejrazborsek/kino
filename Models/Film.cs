@@ -20,6 +20,6 @@ namespace web.Models
         public string Film_img { get; set; }
 
         // ne tuji ključ, ampak smzd da to rabi
-        public ICollection<Predstava>? Predstave { get; set; }
+        //public ICollection<Predstava>? Predstave { get; set; }
     }
 }
