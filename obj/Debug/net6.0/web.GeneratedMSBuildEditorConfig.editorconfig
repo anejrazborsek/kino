@@ -8,11 +8,11 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = web
 build_property.RootNamespace = web
-build_property.ProjectDir = d:\FRI\IS\repository\
+build_property.ProjectDir = D:\FRI\IS\repository\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = d:\FRI\IS\repository
+build_property.MSBuildProjectDirectory = D:\FRI\IS\repository
 build_property._RazorSourceGeneratorDebug = 
 
 [d:/FRI/IS/repository/Areas/Identity/Pages/Account/Login.cshtml]
